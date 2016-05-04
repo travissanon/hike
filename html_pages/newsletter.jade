@@ -1,0 +1,43 @@
+html(lang='en')
+  head
+    title Hike.
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href='img/favicons/favicon.ico')
+    link(rel='stylesheet', href='../css/main.css')
+    link(rel='stylesheet', href='../css/media-queries.css')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+  body
+    .container
+      video(poster="https://media.giphy.com/media/NU9hqIw9vN0fm/giphy.gif")
+      .row.head
+        .col-xs-4
+          h2.head-title.news-nav Hike.
+          
+        .col-xs-8
+          nav
+            a.i-nav
+              img(src="http://i.imgur.com/rOFRfND.png" class="nav-icon")
+            ul.nav.nav-pills.foot-nav.text-right
+              li(role="presentation")
+                a(href="../index.html" class="nav-color news-nav") Home
+              li(role="presentation")
+                a(href="" class="nav-color news-nav") Mountains
+              li(role="presentation")
+                a(href="gear.html" class="nav-color news-nav") Gear
+              li(role="presentation")
+                a(href="#" class="nav-color news-nav") Newsletter
+      .row
+        .col-md-12
+          .group          
+            h1.newsletter Join our Newsletter :)
+            p.newsletter Lorem ipsum sit amet.
+            form.form-inline(role="form")
+              ul.list-inline.price-center.news-input
+                li
+                  input.form-control(type="email", placeholder="Email Address")
+                li
+                  button(type="button" class="btn btn-primary") Suscribe
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")              
+    script(src='../menu.js', type='text/javascript')

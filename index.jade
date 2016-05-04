@@ -1,0 +1,138 @@
+
+html(lang='en') 
+  head
+    title Hike.
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href='img/favicons/favicon.ico')
+    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='css/media-queries.css')
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+  body
+    
+    .row.head
+      .col-xs-4
+        h2.head-title Hike.
+        
+      .col-xs-8
+        nav
+          a.i-nav
+            img(src="http://www.btownweb.com/wp-content/themes/cnsweb-2014/images/menu-trigger.png" class="nav-icon")           
+          ul.nav.nav-pills.foot-nav.text-right
+            li(role="presentation")
+              a(href="#" class="nav-color") Home
+            li(role="presentation")
+              a(href="html_pages/mountains.html" class="nav-color") Mountains
+            li(role="presentation")
+              a(href="html_pages/gear.html" class="nav-color") Gear
+            li(role="presentation")
+              a(href="html_pages/newsletter.html" class="nav-color") Newsletter
+              
+    .row
+      .col-md-12
+        a(href="html_pages/mountains.html")
+          img(src='img/img-mobile.png' class="img-mobile")  
+        .slider
+          .slide-viewer
+            .slide-group
+              .slide.slide-1
+                a(href="html_pages/mountains.html")
+                  img(src='img/aconagua.png')
+              .slide.slide-2
+                a(href="html_pages/mountains.html")
+                  img(src='img/half_dome.png')
+              .slide.slide-3
+                a(href="html_pages/mountains.html")
+                  img(src='img/everest.png')
+              .slide.slide-4
+                a(href="html_pages/mountains.html")
+                  img(src='img/kilim.png')
+          .slide-buttons
+            
+    .row.section-2          
+      .col-md-12
+        a(href="http://news.discovery.com/adventure/survival/top-10-survival-tips-every-hiker-should-know-131107.htm")
+          img(src='img/hiking.png', class="poison-ivy")
+          
+    .row.section-3
+      .col-md-12
+        h1 Hike Gear
+          
+        .row
+          .col-md-6
+            img(src="img/pack.jpg" class="products prod-1")
+            h3 Backpack
+            ul.list-inline.price-center
+              li
+                h4 $39.99
+              li
+                button(type="button" class="btn btn-default") Check it
+          .col-md-6
+            img(src="img/boots.jpg" class="products prod-2")
+            h3 Hiking Boots
+            ul.list-inline.price-center
+              li
+                h4 $99.99
+              li
+                button(type="button" class="btn btn-default") Check it
+        .row
+          .col-md-6
+            img(src="img/flask.jpg" class="products prod-3")
+            h3 Hydro Flask
+            ul.list-inline.price-center
+              li
+                h4 $29.99
+              li
+                button(type="button" class="btn btn-default") Check it
+          .col-md-6
+            img(src="img/tent.jpg" class="products prod-3")
+            h3 Tent
+            ul.list-inline.price-center
+              li
+                h4 $199.99
+              li
+                button(type="button" class="btn btn-default") Check it
+        .row
+          .col-md-12
+            h3 > Check out more gear <
+            
+    .row.section-4
+          .col-md-12
+            h1 Instagram
+            a(href="http://whiskandwhittle.tumblr.com/")
+              h3 Follow us on instagram :)
+    .row
+      .col-md-12
+        img(src="img/instagram-pics.png" class="ig-pic")
+          
+    .row.section-5
+      .col-md-12
+        h2.foot-title Hike.
+      .row
+        .col-md-12
+            ul.foot-nav.foot-title
+              li
+                a(href="" class="nav-color1") Home
+              li
+                a(href="" class="nav-color1") Mountains
+              li
+                a(href="" class="nav-color1") Gear
+              li
+                a(href="" class="nav-color1") Newsletter
+       .row
+        .col-md-12   
+          ul.icons.foot-title
+            li
+              img(src="img/pt.png", width="30px")
+            li
+              img(src="img/tr.png", width="30px") 
+            li
+              img(src="img/tw.png", width="30px")
+            li
+              img(src="img/fb.png", width="30px") 
+          
+    
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+    script(src='script.js', type='text/javascript')
+    script(src='menu.js', type='text/javascript')
+    

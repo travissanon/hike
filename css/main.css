@@ -216,6 +216,10 @@ video {
   padding-top: 50px;
 }
 
+.prod-title {
+  text-align: center;
+}
+
 .one, .two {
   padding-bottom: 25px;
 }

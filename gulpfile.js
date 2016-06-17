@@ -1,5 +1,9 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    livereload = require('gulp-livereload');
 
-gulp.task('default', function(){
-  
+//Watch Task
+gulp.task('watch', function (){
+  gulp.watch('', ['']);
 });
+
+gulp.task('default', ['watch']);

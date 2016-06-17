@@ -7,17 +7,51 @@ html, body {
   padding: 0;
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, h4, h5, p, a {
   text-align: center;
   font-family: 'Tinos', serif;
+}
+
+h1 {
+  padding-top: 20px;
 }
 
 h3 {
   font-size: 35px;
 }
 
+h4 {
+  font-size: 20px;
+}
+
 p {
   font-style: italic;
+}
+
+.btn-main {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: 'Tinos', serif;
+  color: #ffffff;
+  font-size: 15px;
+  background-color: #222222;
+  margin: 20px 0 0 0;
+  padding: 10px 50px 10px 50px;
+  border: solid #222222 2px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.btn-main:hover {
+  background-color: #ffffff;
+  color: #222222;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .col-md-8 {
@@ -46,10 +80,6 @@ p {
 }
 
 /***** HOME *****/
-.img-mobile {
-  max-width: 100%;
-}
-
 .slider-section {
   border: 1px solid #f6f6f6;
   padding: 30px 0 30px 0;
@@ -107,8 +137,9 @@ p {
 .tips {
   border: 1px solid #000000;
   padding: 50px 20px 60px 20px;
-  margin-top: 100px;
   width: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .tips p {
@@ -122,7 +153,7 @@ p {
   padding-top: 20px;
 }
 
-.section-3 {
+.section-3, .section-4 {
   background-color: #f6f6f6;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -148,12 +179,12 @@ p {
   padding-top: 20px;
 }
 
-.ig-pic {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  padding-top: 100px;
-  padding-bottom: 50px;
+.g1 {
+  padding: 200px 0 100px 0;
+}
+
+.g2 {
+  padding: 100px 0 100px 0;
 }
 
 .section-5 {
@@ -191,35 +222,6 @@ p {
 .news-title {
   color: white;
   padding-bottom: 10px;
-}
-
-/***** NEWSLETTER *****/
-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-}
-
-.news-nav {
-  color: white;
-}
-
-.newsletter {
-  text-align: center;
-  color: white;
-}
-
-.group {
-  padding-top: 200px;
-}
-
-.news-input {
-  padding-top: 50px;
 }
 
 /*****GEAR*****/
@@ -340,4 +342,52 @@ h4 {
   height: 300px;
   margin: 0 auto 0 auto;
   max-width: 100%;
+}
+
+/***** NEWSLETTER *****/
+.news {
+  background-image: url(http://i.imgur.com/xkg7fSG.jpg);
+  background-size: cover;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.newsletter {
+  text-align: center;
+  color: black;
+}
+
+.group {
+  padding-top: 200px;
+}
+
+.news-input {
+  padding-top: 50px;
+}
+
+.sub {
+  border: 1px solid #000000;
+  background-color: white;
+  padding: 50px 20px 60px 20px;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.sub h2 {
+  padding-bottom: 35px;
+}
+
+.news-foot {
+  background-color: #202020;
 }

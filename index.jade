@@ -27,27 +27,27 @@ html(lang='en')
               a(href="html_pages/gear.html" class="nav-color") Gear
             li(role="presentation")
               a(href="html_pages/newsletter.html" class="nav-color") Newsletter
-    .container          
+    .container         
       .row.slider-section
         .slider
           .slide-viewer
             .slide-group
               .slide.slide-1
-                img(src='img/slide-1.jpg', alt='No two are the same')
+                img(src='img/mountain.png', alt='No two are the same')
               .slide.slide-2
-                img(src='img/slide-2.jpg', alt='Monsieur Mints')
+                img(src='img/gear.png', alt='Monsieur Mints')
               .slide.slide-3
-                img(src='img/slide-3.jpg', alt='The Flower Series')
-              .slide.slide-4
-                img(src='img/slide-4.jpg', alt="Salt o' The Sea")
+                img(src='img/newsletter.png', alt='The Flower Series')
         .slide-buttons
             
       .row.section-2
         .col-md-6.text-center 
           img(src="img/hiking-tips.png" width="350px") 
-        .col-md-6.tips.text-center
-          h3 Hiking tips.
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.        
+        .col-md-6.text-center
+          .tips
+            h3 Hiking tips.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            button.btn-main.bt1(type='button') Here.       
           
       .row.section-3
         .col-md-12
@@ -56,49 +56,62 @@ html(lang='en')
           .row
             .col-md-6
               img(src="img/pack.jpg" class="products prod-1")
-              h3 Backpack
+              h4 Backpack
               ul.list-inline.price-center
                 li
-                  h4 $39.99
+                  h5 $39.99
                 li
-                  button(type="button" class="btn btn-default") Check it
+                  button(type="button" class="btn btn-default") Buy
             .col-md-6
               img(src="img/boots.jpg" class="products prod-2")
-              h3 Hiking Boots
+              h4 Hiking Boots
               ul.list-inline.price-center
                 li
-                  h4 $99.99
+                  h5 $99.99
                 li
-                  button(type="button" class="btn btn-default") Check it
+                  button(type="button" class="btn btn-default") Buy
           .row
             .col-md-6
               img(src="img/flask.jpg" class="products prod-3")
-              h3 Hydro Flask
+              h4 Hydro Flask
               ul.list-inline.price-center
                 li
-                  h4 $29.99
+                  h5 $29.99
                 li
-                  button(type="button" class="btn btn-default") Check it
+                  button(type="button" class="btn btn-default") Buy
             .col-md-6
               img(src="img/tent.jpg" class="products prod-3")
-              h3 Tent
+              h4 Tent
               ul.list-inline.price-center
                 li
-                  h4 $199.99
+                  h5 $199.99
                 li
-                  button(type="button" class="btn btn-default") Check it
+                  button(type="button" class="btn btn-default") Buy
           .row
-            .col-md-12
-              h3 > Check out more gear <
+            .col-md-12.text-center
+              button.btn-main.bt2(type='button') Check out more gear.
                  
-    .row.section-4
+      .row.section-4
           .col-md-12
-            h1 Instagram
-            a(href="http://whiskandwhittle.tumblr.com/")
-              h3 Follow us on instagram :)
-    .row
-      .col-md-12
-        img(src="img/instagram-pics.png" class="ig-pic")
+            h1 Photo Gallery
+            h5 What we like.        
+          .row.g1
+            .col-md-4.col-sm-4.text-center.light-box.lb1
+              img(src="http://i.imgur.com/2Lp9Bjf.jpg?1", alt="")
+            .col-md-4.col-sm-4.text-center.light-box.lb2
+              img(src="http://i.imgur.com/SRNTYpM.jpg?1", alt="")
+            .col-md-4.col-sm-4.text-center.light-box.lb3
+              img(src="http://i.imgur.com/poNyFFG.jpg?1", alt="")
+          .row.g2
+            .col-md-4.col-sm-4.text-center.light-box.lb4
+              img(src="http://i.imgur.com/gZnVefm.jpg?1", alt="")
+            .col-md-4.col-sm-4.text-center.light-box.lb5
+              img(src="http://i.imgur.com/RX6bHwr.jpg?1", alt="")
+            .col-md-4.col-sm-4.text-center.light-box.lb6
+              img(src="http://i.imgur.com/ZQjhmGo.jpg?1", alt="")
+          .row
+            .col-md-12.text-center
+              button.btn-main.bt3(type='button') Our Tumblr.
           
     .row.section-5
       .col-md-12
@@ -107,13 +120,13 @@ html(lang='en')
       .row
         .col-md-12   
           ul.icons.foot-title
-            li
+            li.sm
               img(src="img/pt.png", width="30px")
-            li
+            li.sm
               img(src="img/tr.png", width="30px") 
-            li
+            li.sm
               img(src="img/tw.png", width="30px")
-            li
+            li.sm
               img(src="img/fb.png", width="30px") 
           
     

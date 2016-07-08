@@ -59,7 +59,7 @@ p {
 }
 
 .head {
-  width: 100%;
+  width: 104%;
   display: inline-block;
   background-color: #f6f6f6;
 }
@@ -70,7 +70,7 @@ p {
 }
 
 .nav {
-  margin: 10px 0 0 50px;
+  margin: 15px 0 0 50px;
 }
 
 .nav-color {
@@ -127,6 +127,7 @@ p {
   color: #000;
   font-size: 200%;
   line-height: 0.5em;
+  outline: none;
 }
 
 .slide-btn.active, .slide-btn:hover {

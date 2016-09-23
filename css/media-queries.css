@@ -1,4 +1,4 @@
-@media (max-width: 999px) {
+@media (max-width: 980px) {
   .i-nav{
     display: block;
     width: 50px;
@@ -19,19 +19,51 @@
     padding: 0 0 50px 0;
   }
 
+  .tips{
+    width: 350px;
+  }
+
+  nav {
+    margin-top: 70px;
+  }
+
+  .nav-color {
+    font-size: 20px;
+  }
 
   nav ul {
     overflow: hidden;
     background: #ececec;
-    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 100%;
+    transition: all 0.5s;
   }
 
   nav ul.open {
-    display: block;
+    display: inline-block;
+    visibility: visible;
+    height: 200px;
+    transition: all 0.5s;
+  }
+
+  .dim {
+    transition: all 0.5s;
+    opacity: 0.2;
+    pointer-events: none;
   }
 
   .slider-section {
     display: none;
+  }
+
+  .center1 {
+    left: 5%;
+  }
+
+  .spacing {
+    padding-top: 50px;
+    margin-bottom: 50px;
   }
 }
 

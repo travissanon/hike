@@ -1,10 +1,10 @@
 $('.slider').each(function() {
-  var $this   = $(this);
-  var $group  = $this.find('.slide-group');
-  var $slides = $this.find('.slide');
-  var buttonArray  = [];
-  var currentIndex = 0;
-  var timeout;
+  var $this   = $(this); // 'this' is reffering to the slider.
+  var $group  = $this.find('.slide-group'); // Finds '.slide-group' within '.slider (this)'.
+  var $slides = $this.find('.slide'); // Finds '.slide' within '.slider (this)'.
+  var buttonArray  = []; // Used to hold the number buttons corresponding to slides.
+  var currentIndex = 0; // Starts at slide 1 (0 in the editor).
+  var timeout; // Sets time for slide before shifting to another.
 
   function move(newIndex) {
     var animateLeft, slideLeft;

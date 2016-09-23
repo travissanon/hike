@@ -5,37 +5,43 @@ $(document).ready(function(){
   $('.i-nav').on("click", function(){
 
      $('nav ul').toggleClass('open');
+     $('.container, .accord').toggleClass('dim');
   });
 
-  //Image Opacity
+  if ( $(window).width() > 999) {
+    $('.nav').addClass('nav-pills');
+  } else {
+    $('.nav').removeClass('nav-pills');
+    $('nav').removeClass('pos');
+  }
 
-  $('.light-box').css('opacity', '0.4');
+  //Image Opacity & Effects
 
-  // Image Effects
+  if ( $(window).width() < 999) {
+    $('.light-box').css('opacity', '1');
+  }
+  else {
+    $('.light-box').css('opacity', '0.4');
 
-  $('.lb1,.lb2,.lb3,.lb4,.lb5,.lb6').hover(function(){
-    $(this).stop().animate({"opacity": "1"});
-    }, function(){
-    $(this).stop().animate({"opacity": "0.4"});
-  });
+    $('.lb1,.lb2,.lb3,.lb4,.lb5,.lb6').hover(function(){
+      $(this).stop().animate({"opacity": "1"});
+      }, function(){
+      $(this).stop().animate({"opacity": "0.4"});
+    });
+  }
 
   // Links To Buttons
 
   $('.bt1').click(function(){
-    window.location = "http://www.hikingdude.com/hiking-tips.php";
+    window.open("http://www.hikingdude.com/hiking-tips.php", '_blank');
   });
   $('.bt2').click(function(){
-    window.location = "html_pages/gear.html";
+    window.open("html_pages/gear.html");
   });
   $('.bt3').click(function(){
-    window.location = "http://whiskandwhittle.tumblr.com/";
+    window.open("http://whiskandwhittle.tumblr.com/", '_blank');
   });
-
-  // SM Icon Effects
-
-  $('.sm').mouseenter(function(){
-    $(this).fadeOut();
-    $(this).fadeIn();
+  $('.sm').click(function(){
+    window.open("http://whiskandwhittle.tumblr.com/", '_blank');
   });
-
 });

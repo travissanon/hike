@@ -9,24 +9,22 @@ html(lang='en')
     link(rel='stylesheet', href='../css/media-queries.css')
   body
     
-    .row.head 
-      //.col-xs-4
-        h2.head-title Hike.
-        
-      .col-xs-5 
+    .row.head   
+      .col-xs-3 
           h2.head-title Hike.
         a.i-nav
           img(src="http://www.btownweb.com/wp-content/themes/cnsweb-2014/images/menu-trigger.png" class="nav-icon")
-        nav.pos           
-          ul.nav.nav-pills
+      .col-xs-6
+        nav         
+          ul
             li(role="presentation")
-              a(href="../index.html" class="nav-color") Home 
+              a.top-nav(href="../index.html" class="nav-color") Home 
             li(role="presentation")
-              a(href="mountains.html" class="nav-color") Mountains
+              a.top-nav(href="mountains.html" class="nav-color") Mountains
             li(role="presentation")
-              a(href="gear.html" class="nav-color") Gear 
+              a.top-nav(href="gear.html" class="nav-color") Gear 
             li(role="presentation")
-              a(href="newsletter.html" class="nav-color") Newsletter
+              a.top-nav(href="newsletter.html" class="nav-color") Newsletter
           
   .accord           
     ul.accordion

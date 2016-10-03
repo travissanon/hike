@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
   // Mobile Nav
 
@@ -6,14 +6,8 @@ $(document).ready(function(){
 
      $('nav ul').toggleClass('open');
      $('.container, .accord').toggleClass('dim');
+     $('html').toggleClass('disableScroll');
   });
-
-  if ( $(window).width() > 999) {
-    $('.nav').addClass('nav-pills');
-  } else {
-    $('.nav').removeClass('nav-pills');
-    $('nav').removeClass('pos');
-  }
 
   //Image Opacity & Effects
 
@@ -44,4 +38,3 @@ $(document).ready(function(){
   $('.sm').click(function(){
     window.open("http://whiskandwhittle.tumblr.com/", '_blank');
   });
-});

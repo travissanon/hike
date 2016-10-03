@@ -32,18 +32,27 @@
   }
 
   nav ul {
-    overflow: hidden;
     background: #ececec;
+    overflow: hidden;
     visibility: hidden;
     height: 0;
-    width: 100%;
+    transition: all 0.5s;
+    text-align: center;
+    margin: 0 -100% 0 -100%;
+    padding: 0;
+  }
+  nav ul li {
+    display: block;
+  }
+  nav ul li:hover {
+    background-color: #d2cece;
     transition: all 0.5s;
   }
 
-  nav ul.open {
-    display: inline-block;
+  .open {
+    display: block;
     visibility: visible;
-    height: 200px;
+    height: 192px;
     transition: all 0.5s;
   }
 
@@ -51,6 +60,10 @@
     transition: all 0.5s;
     opacity: 0.2;
     pointer-events: none;
+  }
+
+  .disableScroll {
+    overflow-y: hidden;
   }
 
   .slider-section {
@@ -64,6 +77,15 @@
   .spacing {
     padding-top: 50px;
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hiking-tips {
+    width: 280px;
+  }
+  .tips {
+    width: 290px;
   }
 }
 

@@ -82,6 +82,31 @@ nav {
   text-align: center;
 }
 
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 15px 10px 15px;
+}
+
+nav ul li:hover {
+  background-color: #e6e1e1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav ul li a:hover {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .nav-color {
   color: #1c1919;
   font-size: 15px;
@@ -199,12 +224,6 @@ nav {
 
 .section-5 {
   background-image: url("../img/woods.png");
-}
-
-.nav-color1 {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 .left, .right {

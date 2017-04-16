@@ -1,0 +1,44 @@
+{
+  "ShopData" : {
+    "apparel" : [
+      {
+        "image1" : "app/img/dummy-imgs/grey-1.png",
+        "image2" : "app/img/dummy-imgs/grey-2.png",
+        "image3" : "app/img/dummy-imgs/grey-3.png",
+        "image4" : "app/img/dummy-imgs/grey-4.png",
+        "image5" : "app/img/dummy-imgs/grey-5.png",
+        "image6" : "app/img/dummy-imgs/grey-6.png"
+      }
+    ],
+    "camp" : [
+      {
+        "image7" : "app/img/dummy-imgs/teal-1.png",
+        "image8" : "app/img/dummy-imgs/teal-2.png",
+        "image9" : "app/img/dummy-imgs/teal-3.png",
+        "image10" : "app/img/dummy-imgs/teal-4.png",
+        "image11" : "app/img/dummy-imgs/teal-5.png",
+        "image12" : "app/img/dummy-imgs/teal-6.png"
+      }
+    ],
+    "utilities" : [
+      {
+        "image13" : "app/img/dummy-imgs/yellow-1.png",
+        "image14" : "app/img/dummy-imgs/yellow-2.png",
+        "image15" : "app/img/dummy-imgs/yellow-3.png",
+        "image16" : "app/img/dummy-imgs/yellow-4.png",
+        "image17" : "app/img/dummy-imgs/yellow-5.png",
+        "image18" : "app/img/dummy-imgs/yellow-6.png"
+      }
+    ],
+    "gadgets" : [
+      {
+        "image19" : "app/img/dummy-imgs/red-1.png",
+        "image20" : "app/img/dummy-imgs/red-2.png",
+        "image21" : "app/img/dummy-imgs/red-3.png",
+        "image22" : "app/img/dummy-imgs/red-4.png",
+        "image23" : "app/img/dummy-imgs/red-5.png",
+        "image24" : "app/img/dummy-imgs/red-6.png"
+      }
+    ]
+  }
+}

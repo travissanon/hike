@@ -1,2 +1,0 @@
-# hike
-An informational website.

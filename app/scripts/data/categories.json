@@ -2,42 +2,42 @@
   "ShopData" : {
     "apparel" : [
       {
-        "image1" : "app/img/dummy-imgs/grey-1.png",
-        "image2" : "app/img/dummy-imgs/grey-2.png",
-        "image3" : "app/img/dummy-imgs/grey-3.png",
-        "image4" : "app/img/dummy-imgs/grey-4.png",
-        "image5" : "app/img/dummy-imgs/grey-5.png",
-        "image6" : "app/img/dummy-imgs/grey-6.png"
+        "image1" : "app/img/utilities/shirt.jpeg",
+        "image2" : "app/img/utilities/hat.jpeg",
+        "image3" : "app/img/utilities/jacket.jpeg",
+        "image4" : "app/img/utilities/pants.jpeg",
+        "image5" : "app/img/utilities/shoes.jpeg",
+        "image6" : "app/img/utilities/jacket2.jpeg"
       }
     ],
     "camp" : [
       {
-        "image7" : "app/img/dummy-imgs/teal-1.png",
-        "image8" : "app/img/dummy-imgs/teal-2.png",
-        "image9" : "app/img/dummy-imgs/teal-3.png",
-        "image10" : "app/img/dummy-imgs/teal-4.png",
-        "image11" : "app/img/dummy-imgs/teal-5.png",
-        "image12" : "app/img/dummy-imgs/teal-6.png"
+        "image7" : "app/img/utilities/blanket.jpg",
+        "image8" : "app/img/utilities/lantern.jpg",
+        "image9" : "app/img/utilities/survival.jpg",
+        "image10" : "app/img/utilities/axe.jpg",
+        "image11" : "app/img/utilities/tent.jpg",
+        "image12" : "app/img/utilities/sleeping-bag.jpg"
       }
     ],
     "utilities" : [
       {
-        "image13" : "app/img/dummy-imgs/yellow-1.png",
-        "image14" : "app/img/dummy-imgs/yellow-2.png",
-        "image15" : "app/img/dummy-imgs/yellow-3.png",
-        "image16" : "app/img/dummy-imgs/yellow-4.png",
-        "image17" : "app/img/dummy-imgs/yellow-5.png",
-        "image18" : "app/img/dummy-imgs/yellow-6.png"
+        "image13" : "app/img/utilities/pack.jpg",
+        "image14" : "app/img/utilities/canteen.jpg",
+        "image15" : "app/img/utilities/flint.jpg",
+        "image16" : "app/img/utilities/knife.jpg",
+        "image17" : "app/img/utilities/hook.jpg",
+        "image18" : "app/img/utilities/log.jpg"
       }
     ],
     "gadgets" : [
       {
         "image19" : "app/img/dummy-imgs/red-1.png",
-        "image20" : "app/img/dummy-imgs/red-2.png",
+        "image20" : "app/img/utilities/hobo-eat-kit.jpg",
         "image21" : "app/img/dummy-imgs/red-3.png",
-        "image22" : "app/img/dummy-imgs/red-4.png",
+        "image22" : "app/img/utilities/matches.jpg",
         "image23" : "app/img/dummy-imgs/red-5.png",
-        "image24" : "app/img/dummy-imgs/red-6.png"
+        "image24" : "app/img/utilities/flashlight.jpg"
       }
     ]
   }

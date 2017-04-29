@@ -63,7 +63,7 @@ nav {
           transition: all 0.2s;
           color: #8f8f8f; }
 
-.nav-color {
+.top-nav {
   font-weight: 100;
   font-size: 14px;
   color: #444444; }
@@ -118,10 +118,6 @@ nav {
     width: 350px;
     margin: auto; }
 
-/*.banner:before {
-    content: '.';
-    font-size: 0;
-    display: inline-block; }*/
 @keyframes float {
   0% {
     padding-top: 18px; }
@@ -192,6 +188,9 @@ nav {
       opacity: 0.6;
       letter-spacing: 10px;
       padding-bottom: 50px; }
+      @media (max-width: 600px) {
+        .about-2 .theTipsText .theTip h1 {
+          font-size: 35px; } }
     .about-2 .theTipsText .theTip h2 {
       font-family: 'Catamaran', serif;
       font-weight: 900;
@@ -204,53 +203,63 @@ nav {
       line-height: 30px;
       max-width: 500px;
       font-size: 15px; }
+      @media (max-width: 600px) {
+        .about-2 .theTipsText .theTip p, .about-2 .theTipsText .theTip ul li {
+          font-size: 13px; } }
 
 .demo-shop {
   background-color: #f6f6f6; }
-
-.demo {
-  -webkit-column-count: 3;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 3;
-  -moz-column-gap: 0px;
-  column-count: 3;
-  column-gap: 0px;
-  max-width: 959px;
-  padding: 100px 0;
-  margin: 0 auto; }
-
-.demo-text h1 {
-  font-family: 'Catamaran', serif;
-  font-weight: 900;
-  font-size: 60px;
-  color: #444444; }
-
-.demo-text p {
-  font-style: italic; }
-
-.demo-container {
-  padding: 100px 0 0 0; }
+  .demo-shop img {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.5vmax; }
+  .demo-shop .demo-container {
+    padding: 100px 0 0 0; }
+  .demo-shop .demo-text {
+    text-align: center; }
+    .demo-shop .demo-text h1 {
+      font-family: 'Catamaran', serif;
+      font-weight: 900;
+      font-size: 60px;
+      color: #444444; }
+    .demo-shop .demo-text p {
+      font-style: italic; }
+  .demo-shop .demo {
+    max-width: 959px;
+    padding: 50px 0;
+    margin: 0 auto;
+    transition: all 0.2s; }
+    .demo-shop .demo .hover-dim:hover {
+      opacity: 0.2;
+      transition: all 0.2s; }
+    .demo-shop .demo .data-imgs .no-padding {
+      padding: 0 !important;
+      margin: 0 !important; }
+    .demo-shop .demo .data-imgs h3 {
+      position: absolute;
+      font-size: 50px;
+      z-index: 1000;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, 0%);
+      visibility: hidden;
+      letter-spacing: 3px;
+      pointer-events: none; }
+    .demo-shop .demo .data-imgs p {
+      position: absolute;
+      font-size: 20px;
+      z-index: 1000;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 0%);
+      visibility: hidden;
+      pointer-events: none; }
 
 .demo-shop img {
-  width: 100% !important;
-  max-width: 350px;
-  padding: 0.5vmax; }
+  max-width: 100%;
+  height: auto;
+  padding: 10px; }
 
-/*.line2 {
-  border-bottom: 1px solid #979797;
-  width: 300px;
-  margin: auto;
-}*/
-/*.demo-shop {
-    max-width: 100%;
-    display: table;
-    margin: 0 auto;
-    img {
-      max-width: 100%;
-      height: auto;
-      padding: 10px;
-    }
-}*/
 .nLetter {
   background-image: url(../img/waterfall.png);
   background-repeat: no-repeat;
@@ -425,14 +434,11 @@ nav {
   background-color: #ffffff; }
 
 .shop-imgs {
-  -webkit-column-count: 3;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 3;
-  -moz-column-gap: 0px;
-  column-count: 3;
-  column-gap: 0px;
   max-width: 1400px;
   margin: 0 auto; }
+  .shop-imgs .hover-dim:hover {
+    opacity: 0.2;
+    transition: all 0.2s; }
   .shop-imgs ul {
     list-style: none;
     margin: 0;
@@ -449,6 +455,10 @@ nav {
 
 .shop {
   padding: 50px 0 0 0; }
+  .shop img {
+    width: 100% !important;
+    max-width: 500px;
+    padding: 0.5vmax; }
 
 .shop-options {
   text-align: center;
@@ -469,11 +479,6 @@ nav {
           text-decoration: none;
           transition: all 0.2s;
           color: #8f8f8f; }
-
-.shop img {
-  width: 100% !important;
-  max-width: 500px;
-  padding: 0.5vmax; }
 
 .news-banner {
   background-image: url(../img/news-img-2.jpg);
@@ -527,6 +532,7 @@ nav {
 .product-container .product-image-container .product-image {
   margin-top: 20px; }
   .product-container .product-image-container .product-image img {
+    width: 500px;
     border: none;
     display: block;
     margin: 0 auto; }
@@ -737,7 +743,13 @@ nav {
 
 @media (max-width: 1139px) {
   .theTipsText {
-    padding: 30px 70px 30px 70px; } }
+    padding: 30px 40px 30px 70px; }
+  .demo-container {
+    padding-top: 0; } }
+
+@media (max-width: 991px) {
+  .mtn-text {
+    font-size: 30px; } }
 
 @media (max-width: 1398px) {
   .sMedia-images .pt-5, .sMedia-images .pt-10, .sMedia-images .pt-15, .sMedia-images .pt-20 {

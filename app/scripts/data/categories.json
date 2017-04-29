@@ -2,42 +2,42 @@
   "ShopData" : {
     "apparel" : [
       {
-        "image1" : "app/img/utilities/shirt.jpeg",
-        "image2" : "app/img/utilities/hat.jpeg",
-        "image3" : "app/img/utilities/jacket.jpeg",
-        "image4" : "app/img/utilities/pants.jpeg",
-        "image5" : "app/img/utilities/shoes.jpeg",
-        "image6" : "app/img/utilities/jacket2.jpeg"
+        "image_0" : "app/img/utilities/shirt.jpeg",
+        "image_1" : "app/img/utilities/hat.jpeg",
+        "image_2" : "app/img/utilities/jacket.jpeg",
+        "image_3" : "app/img/utilities/pants.jpeg",
+        "image_4" : "app/img/utilities/shoes.jpeg",
+        "image_5" : "app/img/utilities/jacket2.jpeg"
       }
     ],
     "camp" : [
       {
-        "image7" : "app/img/utilities/blanket.jpg",
-        "image8" : "app/img/utilities/lantern.jpg",
-        "image9" : "app/img/utilities/survival.jpg",
-        "image10" : "app/img/utilities/axe.jpg",
-        "image11" : "app/img/utilities/tent.jpg",
-        "image12" : "app/img/utilities/sleeping-bag.jpg"
+        "image_0" : "app/img/utilities/blanket.jpg",
+        "image_1" : "app/img/utilities/lantern.jpg",
+        "image_2" : "app/img/utilities/survival.jpg",
+        "image_3" : "app/img/utilities/axe.jpg",
+        "image_4" : "app/img/utilities/tent.jpg",
+        "image_5" : "app/img/utilities/sleeping-bag.jpg"
       }
     ],
     "utilities" : [
       {
-        "image13" : "app/img/utilities/pack.jpg",
-        "image14" : "app/img/utilities/canteen.jpg",
-        "image15" : "app/img/utilities/flint.jpg",
-        "image16" : "app/img/utilities/knife.jpg",
-        "image17" : "app/img/utilities/hook.jpg",
-        "image18" : "app/img/utilities/log.jpg"
+        "image_0" : "app/img/utilities/pack.jpg",
+        "image_1" : "app/img/utilities/canteen.jpg",
+        "image_2" : "app/img/utilities/flint.jpg",
+        "image_3" : "app/img/utilities/knife.jpg",
+        "image_4" : "app/img/utilities/hook.jpg",
+        "image_5" : "app/img/utilities/log.jpg"
       }
     ],
     "gadgets" : [
       {
-        "image19" : "app/img/dummy-imgs/red-1.png",
-        "image20" : "app/img/utilities/hobo-eat-kit.jpg",
-        "image21" : "app/img/dummy-imgs/red-3.png",
-        "image22" : "app/img/utilities/matches.jpg",
-        "image23" : "app/img/dummy-imgs/red-5.png",
-        "image24" : "app/img/utilities/flashlight.jpg"
+        "image_0" : "app/img/dummy-imgs/red-1.png",
+        "image_1" : "app/img/utilities/hobo-eat-kit.jpg",
+        "image_2" : "app/img/dummy-imgs/red-3.png",
+        "image_3" : "app/img/utilities/matches.jpg",
+        "image_4" : "app/img/dummy-imgs/red-5.png",
+        "image_5" : "app/img/utilities/flashlight.jpg"
       }
     ]
   }

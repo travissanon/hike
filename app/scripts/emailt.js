@@ -18,6 +18,5 @@ var validator = function() {
 };
 
 module.exports = {
-  //validator: validator,
-  omfl: omfl
+  validator: validator
 };

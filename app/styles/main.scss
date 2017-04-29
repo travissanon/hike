@@ -90,7 +90,7 @@ nav {
     }
   }
 }
-.nav-color {
+.top-nav {
   font-weight: 100;
   font-size: 14px;
   color: $color-4;
@@ -154,11 +154,6 @@ nav {
   }
 }
 
-  /*.banner:before {
-    content: '.';
-    font-size: 0;
-    display: inline-block; }*/
-
 @keyframes float {
   0% { padding-top: 18px; }
   50% { padding-top: 22px; }
@@ -171,7 +166,8 @@ nav {
 .line {
   border-bottom: 3px solid $color-3;
   width: 16vmax;
-  margin: auto; }
+  margin: auto;
+}
 
 .about {
   position: relative;
@@ -236,6 +232,9 @@ nav {
         opacity: 0.6;
         letter-spacing: 10px;
         padding-bottom: 50px;
+        @media (max-width: 600px) {
+          font-size: 35px;
+        }
       }
       h2 {
         font-family: 'Catamaran', serif;
@@ -250,6 +249,9 @@ nav {
         line-height: 30px;
         max-width: 500px;
         font-size: 15px;
+        @media (max-width: 600px) {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -257,60 +259,81 @@ nav {
   ///////////////////////////////////
  ///////////// SHOP ////////////////
 ///////////////////////////////////
+@mixin dim {
+  .hover-dim {
+    &:hover {
+      opacity: 0.2;
+      transition: all 0.2s;
+    }
+  }
+}
+
 .demo-shop {
   background-color: $color-1;
-}
-
-.demo {
-  -webkit-column-count: 3;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    3;
-  -moz-column-gap:      0px;
-  column-count:         3;
-  column-gap:           0px;
-  max-width: 959px;
-  padding: 100px 0;
-  margin: 0 auto;
-}
-
-.demo-text {
-  h1 {
-    font-family: 'Catamaran', serif;
-    font-weight: 900;
-    font-size: 60px;
-    color: $color-4;
+  img {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.5vmax;
   }
-  p {
-    font-style: italic;
+  .demo-container {
+    padding: 100px 0 0 0;
   }
-}
-
-.demo-container {
-  padding: 100px 0 0 0;
-}
-
-.demo-shop img {
-  width: 100% !important;
-  max-width: 350px;
-  padding: 0.5vmax;
-}
-
-/*.line2 {
-  border-bottom: 1px solid #979797;
-  width: 300px;
-  margin: auto;
-}*/
-
-/*.demo-shop {
-    max-width: 100%;
-    display: table;
+  .demo-text {
+    text-align: center;
+    h1 {
+      font-family: 'Catamaran', serif;
+      font-weight: 900;
+      font-size: 60px;
+      color: $color-4;
+    }
+    p {
+      font-style: italic;
+    }
+  }
+  .demo {
+    max-width: 959px;
+    padding: 50px 0;
     margin: 0 auto;
+    transition: all 0.2s;
+    @include dim;
+    .data-imgs {
+      .no-padding {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      h3 {
+        position: absolute;
+        font-size: 50px;
+        z-index: 1000;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, 0%);
+        visibility: hidden;
+        letter-spacing: 3px;
+        pointer-events: none;
+      }
+      p {
+        position: absolute;
+        font-size: 20px;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 0%);
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+}
+/////////
+.demo-shop {
     img {
       max-width: 100%;
       height: auto;
       padding: 10px;
     }
-}*/
+}
+///////////
 
   /////////////////////////////////////////////////
  ///////////////// NEWSLETTER ////////////////////
@@ -527,14 +550,9 @@ nav {
 }
 
 .shop-imgs {
-  -webkit-column-count: 3;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    3;
-  -moz-column-gap:      0px;
-  column-count:         3;
-  column-gap:           0px;
   max-width: 1400px;
   margin: 0 auto;
+  @include dim;
   ul {
     list-style: none;
     margin: 0;
@@ -556,6 +574,11 @@ nav {
 
 .shop {
   padding: 50px 0 0 0;
+  img {
+    width: 100% !important;
+    max-width: 500px;
+    padding: 0.5vmax;
+  }
 }
 
 .shop-options {
@@ -581,12 +604,6 @@ nav {
       }
     }
   }
-}
-
-.shop img {
-  width: 100% !important;
-  max-width: 500px;
-  padding: 0.5vmax;
 }
 
 
@@ -657,6 +674,7 @@ nav {
     .product-image {
       margin-top: 20px;
       img {
+        width: 500px;
         border: none;
         display: block;
         margin: 0 auto;
@@ -907,7 +925,17 @@ nav {
 }
 
 @media (max-width: 1139px) {
-  .theTipsText { padding: 30px 70px 30px 70px; }
+  .theTipsText { padding: 30px 40px 30px 70px; }
+  .demo-container { padding-top: 0;}
+}
+
+@media (max-width: 991px) {
+  .mtn-text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
 }
 
 @media (max-width: 1398px) {

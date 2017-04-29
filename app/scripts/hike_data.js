@@ -1,20 +1,3 @@
-
-$('.shop-imgs ul li a').click(function(){
-  //var what = this;
-  $.ajax({
-    url: 'app/scripts/data/product-info.json',
-    dataType: 'json',
-    type: 'get',
-    cache: false,
-    success: function(data){
-      //var dos = $(what).parent('li').index();
-      $(data.ProductData.shirt).each(function(index, value){
-        //$('.product-title').html(value.title);
-      });
-    }
-  });
-});
-
 $('.shop-options ul li a').click(function(e){
   e.preventDefault();
   var that = this;
@@ -25,43 +8,68 @@ $('.shop-options ul li a').click(function(e){
     cache: false,
     success: function(data) {
       var uno = $(that).parent('li').index();
-      console.log(uno);
+      var imgIds = ['#img-1', '#img-2', '#img-3', '#img-4', '#img-5', '#img-6'];
+      var imgData = [
+        ['/product/shirt', 'shirt', '$20.00'],
+        ['/product/hat', 'hat', '$12.00'],
+        ['/product/jacket', 'jacket', '$60.00'],
+        ['/product/pants', 'pants', '$50.00'],
+        ['/product/shoes', 'shoes', '$40.00'],
+        ['/product/jacket2', 'jacket2', '$10.00'],
+        ['/product/blanket', 'blanket', '$140.00'],
+        ['/product/lantern', 'lantern', '$90.00'],
+        ['/product/survival', 'survival', '$110.00'],
+        ['/product/axe', 'axe', '$85.00'],
+        ['/product/tent', 'tent', '$40.00'],
+        ['/product/sleeping-bag', 'sack', '$160.00'],
+        ['/product/pack', 'pack', '$75.00'],
+        ['/product/canteen', 'canteen', '$25.00'],
+        ['/product/flint', 'flint', '$30.00'],
+        ['/product/knife', 'knife', '$70.00'],
+        ['/product/hook', 'hook', '$60.00'],
+        ['/product/log', 'log', '$9.00'],
+        ['/product/shirt', 'shirt', '$-.00'],
+        ['/product/hobo-eat-kit', 'utensils', '$-.00'],
+        ['/product/jacket', 'jacket', '$-.00'],
+        ['/product/matches', 'matches', '$-.00'],
+        ['/product/shoes', 'shoes', '$-.00'],
+        ['/product/flashlight', 'flashlight', '$-.00']
+      ];
       if( uno === 0 ) {
         $(data.ShopData.apparel).each(function(index, value){
-          console.log(value.image1);
-          $('.shop-imgs').html('<a href="/product/shirt"><img src="'+value.image1+'" /></a>' +
-                               '<a href="/product/hat"><img src="'+value.image2+'" /></a>' +
-                               '<a href="/product/jacket"><img src="'+value.image3+'" /></a>' +
-                               '<a href="/product/pants"><img src="'+value.image4+'" /></a>' +
-                               '<a href="/product/shoes"><img src="'+value.image5+'" /></a>' +
-                               '<a href="/product/jacket2"><img src="'+value.image6+'" /></a>' );
+          for (var i = 0 ; i <= 5 ; i++){
+            $('.data-imgs ' + imgIds[i]).find('img').attr('src', value['image_' + i]);
+            $('.data-imgs ' + imgIds[i]).find('a').attr('href', imgData[i][0]);
+            $('.data-imgs ' + imgIds[i]).find('h3').html(imgData[i][1].toUpperCase());
+            $('.data-imgs ' + imgIds[i]).find('p').html(imgData[i][2]);
+          }
         });
       } else if ( uno === 1 ) {
         $(data.ShopData.camp).each(function(index, value){
-          $('.shop-imgs').html('<a href="/product/blanket"><img src="'+value.image7+'" /></a>' +
-                               '<a href="/product/lantern"><img src="'+value.image8+'" /></a>' +
-                               '<a href="/product/survival"><img src="'+value.image9+'" /></a>' +
-                               '<a href="/product/axe"><img src="'+value.image10+'" /></a>' +
-                               '<a href="/product/tent"><img src="'+value.image11+'" /></a>' +
-                               '<a href="/product/sleeping-bag"><img src="'+value.image12+'" /></a>' );
+          for (var i = 0 ; i <= 5 ; i++){
+            $('.data-imgs ' + imgIds[i]).find('img').attr('src', value['image_' + i]);
+            $('.data-imgs ' + imgIds[i]).find('a').attr('href', imgData[6+i][0]);
+            $('.data-imgs ' + imgIds[i]).find('h3').html(imgData[6+i][1].toUpperCase());
+            $('.data-imgs ' + imgIds[i]).find('p').html(imgData[6+i][2]);
+          }
         });
       } else if ( uno === 2 ) {
         $(data.ShopData.utilities).each(function(index, value){
-          $('.shop-imgs').html('<a href="/product/pack"><img src="'+value.image13+'" /></a>' +
-                               '<a href="/product/canteen"><img src="'+value.image14+'" /></a>' +
-                               '<a href="/product/flint"><img src="'+value.image15+'" /></a>' +
-                               '<a href="/product/knife"><img src="'+value.image16+'" /></a>' +
-                               '<a href="/product/hook"><img src="'+value.image17+'" /></a>' +
-                               '<a href="/product/log"><img src="'+value.image18+'" /></a>' );
+          for (var i = 0 ; i <= 5 ; i++){
+            $('.data-imgs ' + imgIds[i]).find('img').attr('src', value['image_' + i]);
+            $('.data-imgs ' + imgIds[i]).find('a').attr('href', imgData[12+i][0]);
+            $('.data-imgs ' + imgIds[i]).find('h3').html(imgData[12+i][1].toUpperCase());
+            $('.data-imgs ' + imgIds[i]).find('p').html(imgData[12+i][2]);
+          }
         });
       } else if ( uno === 3 ) {
         $(data.ShopData.gadgets).each(function(index, value){
-          $('.shop-imgs').html('<img src="'+value.image19+'" />' +
-                               '<img src="'+value.image20+'" />' +
-                               '<img src="'+value.image21+'" />' +
-                               '<img src="'+value.image22+'" />' +
-                               '<img src="'+value.image23+'" />' +
-                               '<img src="'+value.image24+'" />' );
+          for (var i = 0 ; i <= 5 ; i++){
+            $('.data-imgs ' + imgIds[i]).find('img').attr('src', value['image_' + i]);
+            $('.data-imgs ' + imgIds[i]).find('a').attr('href', imgData[18+i][0]);
+            $('.data-imgs ' + imgIds[i]).find('h3').html(imgData[18+i][1].toUpperCase());
+            $('.data-imgs ' + imgIds[i]).find('p').html(imgData[18+i][2]);
+          }
         });
       }
     }
@@ -90,4 +98,15 @@ $(function(){
       }
     });
   });
+});
+
+$('.hover-dim').mouseover(function(){
+  var choice = $(this).parent().prop('id');
+  $('#' + choice + ' h3').css('visibility', 'visible');
+  $('#' + choice + ' p').css('visibility', 'visible');
+});
+
+$('.hover-dim').mouseleave(function(){
+  $('.data-imgs h3').css('visibility', 'hidden');
+  $('.data-imgs p').css('visibility', 'hidden')
 });

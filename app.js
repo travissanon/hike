@@ -6,6 +6,8 @@ var ejs = require('ejs'),
     app = express();
     bodyParser = require('body-parser');
 
+require('dotenv').config();
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set('view engine', 'ejs');
@@ -24,7 +26,6 @@ app.get('/index', function(req,res){
 
 app.get('/mountains', function(req,res){
   res.render('mountains');
-  console.log(req.body);
 });
 
 app.get('/gear', function(req,res){
@@ -35,18 +36,18 @@ app.get('/newsletter', function(req,res){
   res.render('newsletter');
 });
 
-app.post('/newsletter', urlencodedParser, function(req, res){
+app.post(['/gear', '/', '/index', '/mountains', '/newsletter'], urlencodedParser, function(req, res){
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-          user: '',
-          pass: ''
+          user: process.env.TOKEN_1,
+          pass: process.env.TOKEN_2
       }
   });
   // setup email data with unicode symbols
   let mailOptions = {
-      from: 'recursant@gmail.com', // sender address
+      from: process.env.TOKEN_1, // sender address
       to: req.body.email, // list of receivers
       subject: 'Hike ✔', // Subject line
       text: 'Im slippin inspiration in yo inbox.', // plain text body
@@ -59,7 +60,14 @@ app.post('/newsletter', urlencodedParser, function(req, res){
       }
       console.log('Message %s sent: %s', info.messageId, info.response);
   });
-  res.render('newsletter-success', {data: req.body});
+  if (req.path === '/newsletter'){
+    res.render('newsletter-success', {data: req.body});
+  } else {
+    var data = {
+      text: 'An email has been delivered to your inbox'
+    };
+    res.render(req.path.replace(/\//g, ''), {data: data});
+  }
 });
 
 //APPAREL//
@@ -148,7 +156,7 @@ app.get('/product/lantern', function(req,res){
 
 app.get('/product/survival', function(req,res){
   var data = {
-    title: 'Tent',
+    title: 'Survival Kit',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: '$110.00',
     image: '../app/img/utilities/survival.jpg'
@@ -203,7 +211,7 @@ app.get('/product/canteen', function(req,res){
     title: 'Canteen',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: '$25.00',
-    image: '../app/img/utilities/centeen.jpg'
+    image: '../app/img/utilities/canteen.jpg'
   };
   res.render('product', {data: data});
 });

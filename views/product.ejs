@@ -8,7 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <% include partials/header.ejs %>
+  <div class="row head">
+    <div class="col-xs-2">
+      <h2 class="head-title">Hike.</h2>
+    </div>
+    <div class="col-xs-6">
+      <nav>
+        <ul>
+          <li role="presentation"><a href="../index" class="top-nav">HOME</a></li>
+          <li role="presentation"><a href="../mountains" class="top-nav">MOUTAINS</a></li>
+          <li role="presentation"><a href="../gear" class="top-nav">GEAR</a></li>
+          <li role="presentation"><a href="../newsletter" class="top-nav">NEWSLETTER</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-xs-2">
+      <a class="i-nav">
+        <img src="../app/images/i-nav.png" class="nav-icon" />
+      </a>
+      <div class="cart-button"><p class="cart">CART (1)</p></div>
+    </div>
+  </div>
   <div class="product-container pc1 row">
     <div class="product-image-container col-md-6">
       <div class="product-image">
@@ -31,7 +51,6 @@
   </div>
   <% include partials/footer.ejs %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="../app/scripts/script.js" type="text/javascript"></script>
   <script src="../app/scripts/menu.js" type="text/javascript"></script>
   <script src="../app/scripts/hike_data.js" type="text/javascript"></script>
 </body>

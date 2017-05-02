@@ -5,6 +5,7 @@ var ejs = require('ejs'),
     em = require('./app/scripts/emailt');
     app = express();
     bodyParser = require('body-parser');
+    reload = require('reload');
 
 require('dotenv').config();
 
@@ -13,8 +14,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname));
 
-app.listen(process.env.PORT, '0.0.0.0', function(err) {
-  console.log("Started listening on %s", app.url);
+app.listen(process.env.PORT || 4000, '0.0.0.0', function(err) {
+  console.log("Started listening on %s", 4000);
 });
 
 app.get('/', function(req,res){
@@ -253,6 +254,68 @@ app.get('/product/log', function(req,res){
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: '$9.00',
     image: '../app/img/utilities/log.jpg'
+  };
+  res.render('product', {data: data});
+});
+
+//UTILITIES//
+
+app.get('/product/fishing-pod', function(req,res){
+  var data = {
+    title: 'Fishing Pod',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: '$30.00',
+    image: '../app/img/utilities/fishing-pod.jpg'
+  };
+  res.render('product', {data: data});
+});
+
+app.get('/product/hobo-eat-kit', function(req,res){
+  var data = {
+    title: 'Utensils',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: '$22.00',
+    image: '../app/img/utilities/hobo-eat-kit.jpg'
+  };
+  res.render('product', {data: data});
+});
+
+app.get('/product/whistle', function(req,res){
+  var data = {
+    title: 'Whistle',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: '$34.00',
+    image: '../app/img/utilities/whistle.jpg'
+  };
+  res.render('product', {data: data});
+});
+
+app.get('/product/matches', function(req,res){
+  var data = {
+    title: 'Matches',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: '$17.00',
+    image: '../app/img/utilities/matches.jpg'
+  };
+  res.render('product', {data: data});
+});
+
+app.get('/product/tweezers', function(req,res){
+  var data = {
+    title: 'Tweezers',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: '$25.00',
+    image: '../app/img/utilities/tweezers.jpg'
+  };
+  res.render('product', {data: data});
+});
+
+app.get('/product/flashlight', function(req,res){
+  var data = {
+    title: 'Adventure Log',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    price: '$60.00',
+    image: '../app/img/utilities/flashlight.jpg'
   };
   res.render('product', {data: data});
 });

@@ -28,12 +28,12 @@ $('.shop-options ul li a').click(function(e){
         ['/product/knife', 'knife', '$70.00'],
         ['/product/hook', 'hook', '$60.00'],
         ['/product/log', 'log', '$9.00'],
-        ['/product/shirt', 'shirt', '$-.00'],
-        ['/product/hobo-eat-kit', 'utensils', '$-.00'],
-        ['/product/jacket', 'jacket', '$-.00'],
-        ['/product/matches', 'matches', '$-.00'],
-        ['/product/shoes', 'shoes', '$-.00'],
-        ['/product/flashlight', 'flashlight', '$-.00']
+        ['/product/fishing-pod', 'pod', '$30.00'],
+        ['/product/hobo-eat-kit', 'utensils', '$32.00'],
+        ['/product/whistle', 'whistle', '$34.00'],
+        ['/product/matches', 'matches', '$17.00'],
+        ['/product/tweezers', 'tweezers', '$25.00'],
+        ['/product/flashlight', 'flashlight', '$60.00']
       ];
       if( uno === 0 ) {
         $(data.ShopData.apparel).each(function(index, value){

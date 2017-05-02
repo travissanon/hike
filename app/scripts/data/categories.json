@@ -32,11 +32,11 @@
     ],
     "gadgets" : [
       {
-        "image_0" : "app/img/dummy-imgs/red-1.png",
+        "image_0" : "app/img/utilities/fishing-pod.jpg",
         "image_1" : "app/img/utilities/hobo-eat-kit.jpg",
-        "image_2" : "app/img/dummy-imgs/red-3.png",
+        "image_2" : "app/img/utilities/whistle.jpeg",
         "image_3" : "app/img/utilities/matches.jpg",
-        "image_4" : "app/img/dummy-imgs/red-5.png",
+        "image_4" : "app/img/utilities/tweezers.jpg",
         "image_5" : "app/img/utilities/flashlight.jpg"
       }
     ]

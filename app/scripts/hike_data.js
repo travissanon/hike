@@ -89,8 +89,8 @@ $(function(){
         $(data.MtnData[uno]).each(function(index, value) {
           $('.mtn-container').toggleClass('openSesame');
           $('.mount-nav img').toggleClass('flip');
-          $('.mtn-text').html(value.title).hide().fadeIn(400);
-          $('.mtn-title').html(value.text).hide().fadeIn(600);
+          $('.mtn-title').html(value.title).hide().fadeIn(400);
+          $('.mtn-text').html(value.text).hide().fadeIn(600);
           $('.mtn-title-2').html(value.text2).hide().fadeIn(700);
           $('.mtn-title-3').html(value.text3).hide().fadeIn(800);
           $('.ex-img').html('<img src="'+value.image+'" class="tips_img"/>').hide().fadeIn(400);
@@ -100,13 +100,33 @@ $(function(){
   });
 });
 
-$('.hover-dim').mouseover(function(){
-  var choice = $(this).parent().prop('id');
-  $('#' + choice + ' h3').css('visibility', 'visible');
-  $('#' + choice + ' p').css('visibility', 'visible');
+//Image placement
+if ( $(window).width() < 961) {
+  $('.about_img').attr('src', 'app/img/andreas-mobile.jpg');
+}
+$(window).on('resize', function(){
+  if ( $(window).width() < 961) {
+    $('.about_img').attr('src', 'app/img/andreas-mobile.jpg');
+  } else {
+    $('.about_img').attr('src', 'app/img/andreas.jpg');
+  }
 });
 
-$('.hover-dim').mouseleave(function(){
-  $('.data-imgs h3').css('visibility', 'hidden');
-  $('.data-imgs p').css('visibility', 'hidden')
-});
+function checkWidth(){
+  var windowSize = $(window).width();
+  if (windowSize > 961) {
+    $('.hover-dim').mouseover(function(){
+      var choice = $(this).parent().prop('id');
+      $('#' + choice + ' h3').css('display', 'block');
+      $('#' + choice + ' p').css('display', 'block');
+    });
+
+    $('.hover-dim').mouseleave(function(){
+      $('.data-imgs h3').css('display', 'none');
+      $('.data-imgs p').css('display', 'none')
+    });
+  }
+}
+
+checkWidth();
+$(window).resize(checkWidth);

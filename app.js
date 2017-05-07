@@ -14,10 +14,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname));
 
-var port = process.env.PORT || 4000;
-
-app.listen(port, function(err) {
-  console.log("Started listening on " + port);
+app.listen(process.env.PORT || 4000, function(err) {
+  console.log("Started listening on " + app.port);
 });
 
 app.get('/', function(req,res){

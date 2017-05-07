@@ -47,14 +47,15 @@ h4 {
       width: 100px;
       padding: 7.5px 0; }
   .head nav {
-    text-align: center;
-    margin: 0 0 0 0; }
+    text-align: center; }
     .head nav ul {
       list-style-type: none;
       display: inline-block; }
       .head nav ul li {
-        padding: 10px 17px;
-        display: inline-block; }
+        padding: 10px 17px; }
+        @media (min-width: 962px) {
+          .head nav ul li {
+            display: inline-block; } }
         .head nav ul li a {
           transition: all 0.2s; }
           .head nav ul li a:hover {
@@ -666,7 +667,7 @@ h4 {
   nav ul {
     margin: 0 -100% 0 -100%;
     transition: all 0.5s;
-    background: #ececec;
+    display: block;
     text-align: center;
     visibility: hidden;
     overflow: hidden;
@@ -684,8 +685,9 @@ h4 {
     display: block;
     height: 100%; }
   .space {
-    height: 190px;
-    transition: all 0.5s; }
+    height: 200px;
+    transition: all 0.5s;
+    border: 1px solid rgba(51, 51, 51, 0.84); }
   .dim {
     transition: all 0.5s;
     opacity: 0.2;

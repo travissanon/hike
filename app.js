@@ -1,22 +1,20 @@
 /* jshint esversion: 6 */
 var ejs = require('ejs'),
-    express = require('express');
-    nodemailer = require('nodemailer');
-    em = require('./app/scripts/emailt');
-    app = express();
+    express = require('express'),
+    nodemailer = require('nodemailer'),
+    em = require('./app/scripts/emailt'),
+    app = express(),
     bodyParser = require('body-parser');
-    reload = require('reload');
 
 require('dotenv').config();
 
+app.set('port', (process.env.PORT || 4000));
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.set('view engine', 'ejs');
 app.use(express.static(__dirname));
+app.set('view engine', 'ejs');
 
-app.listen(process.env.PORT || 4000, function(err) {
-  console.log("Started listening on " + app.port);
-});
 
 app.get('/', function(req,res){
   res.render('index');
@@ -318,4 +316,8 @@ app.get('/product/flashlight', function(req,res){
     image: '../app/img/utilities/flashlight.jpg'
   };
   res.render('product', {data: data});
+});
+
+app.listen(app.get('port'), function(err) {
+  console.log("Started listening on " + app.get('port'));
 });

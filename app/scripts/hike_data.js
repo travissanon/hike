@@ -125,8 +125,12 @@ function checkWidth(){
       $('.data-imgs h3').css('display', 'none');
       $('.data-imgs p').css('display', 'none')
     });
+  } else {
+    var choice = $(this).parent().prop('id');
+    $('#' + choice + ' h3').css('display', 'block');
+    $('#' + choice + ' p').css('display', 'block');
   }
 }
 
 checkWidth();
-$(window).resize(checkWidth);
+$(window).resize(checkWidth());

@@ -41,9 +41,7 @@ h3 { font-size: 30px; }
 
 h4 { font-size: 20px; }
 
-  /////////////////////////////////////////////////
- /////////////////// HEADER //////////////////////
-/////////////////////////////////////////////////
+//header
 .head {
   background-color: $color-1;
   display: inline-block;
@@ -103,10 +101,6 @@ h4 { font-size: 20px; }
   }
 }
 
-  /////////////////////////////////////////////////
- /////////////////// BANNER //////////////////////
-/////////////////////////////////////////////////
-
 .banner {
   background-image: url(../img/mount-scenery.jpg);
   background-repeat: no-repeat;
@@ -164,9 +158,7 @@ h4 { font-size: 20px; }
   100% { padding: 18px; }
 }
 
-  /////////////////////////////////////////////////
- /////////////////// ABOUT ///////////////////////
-/////////////////////////////////////////////////
+//About
 .line {
   border-bottom: 3px solid $color-3;
   width: 16vmax;
@@ -216,7 +208,11 @@ h4 { font-size: 20px; }
   padding-bottom: 50px;
   width: 100%;
   .about_img {
-    width: 50vw;
+    width: 35vw;
+    @media(min-width: 960px) {
+      float: right;
+      padding-right: 30px;
+    }
   }
   @media (max-width: 960px){
     @include shrink;
@@ -235,16 +231,14 @@ h4 { font-size: 20px; }
     margin: 0 auto;
     display: block;
   }
-  .wanderlust_icon {
-    max-width: 100px;
-    margin: 0 auto;
-    display: block;
-  }
 
   .theTipsText{
     .theTip {
       text-align: center;
-      max-width: 555px;
+      max-width: 480px;
+      height: 100%;
+      float: left;
+      padding-left: 30px;
       padding: 30px 0;
       display: table;
       margin: 0 auto;
@@ -279,9 +273,7 @@ h4 { font-size: 20px; }
     }
   }
 }
-  ///////////////////////////////////
- ///////////// SHOP ////////////////
-///////////////////////////////////
+
 @mixin dim {
   .hover-dim {
     &:hover {
@@ -292,7 +284,7 @@ h4 { font-size: 20px; }
 }
 
 .demo-shop {
-  background-color: $color-3;
+  background-color: $color-1;
   img {
     width: 100%;
     max-width: 1000px;
@@ -314,26 +306,14 @@ h4 { font-size: 20px; }
     }
   }
 }
-/////////
-/*.demo-shop {
-    img {
-      max-width: 100%;
-      height: auto;
-      padding: 10px;
-    }
-}*/
-///////////
 
-  /////////////////////////////////////////////////
- ///////////////// NEWSLETTER ////////////////////
-/////////////////////////////////////////////////
 .nLetter {
-  background-image: url(../img/waterfall.png);
+  background-color: #FDD835;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   position: relative;
-  height: 100%;
+  height: 600px;
   .nLetter-group {
     position: absolute;
     top: 50%;
@@ -341,40 +321,53 @@ h4 { font-size: 20px; }
     transform: translate(-50%, -50%);
     max-width: 650px;
     margin: 0 auto;
+    border-left: 0.5px solid $color-7;
+    border-right: 0.5px solid $color-7;
+    padding: 0 30px;
+    @media screen and (max-width: 900px) {
+      padding: 0;
+      border: none;
+    }
     h3 {
-      font-size: 30px;
-      opacity: 0.8;
-      color: $color-3;
+      font-size: 25px;
+      color: $color-7;
       margin: 0;
     }
     h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'catamaran', serif;
       padding-bottom: 20px;
       letter-spacing: 5px;
       font-style: italic;
-      font-size: 90px;
-      opacity: 0.8;
-      color: $color-3;
+      font-size: 50px;
+      color: $color-7;
    }
     .line3 {
-      color: $color-3;
+      color: $color-7;
       margin: 0 auto;
       width: 300px;
     }
     p {
-      font-family: 'Playfair Display', serif;
-      padding: 30px 0 20px 0;
+      font-family: 'playfairDisplay', serif;
+      padding: 10px 0 10px 0;
       text-align: justify;
       text-align: center;
-      font-style: italic;
-      line-height: 50px;
+      line-height: 35px;
       font-size: 20px;
       margin: 0 auto;
-      opacity: 0.8;
-      color: $color-3;
+      font-weight: 100;
+
+      color: $color-7;
       width: 450px;
     }
-    .bt4 {  margin-top: 30px; }
+    .bt4 {
+      margin-top: 30px;
+      color: $color-7;
+      border-color: $color-7;
+      &:hover {
+        background-color: $color-7;
+        color: #FDD835;
+      }
+    }
   }
 }
 
@@ -391,7 +384,7 @@ h4 { font-size: 20px; }
     top: 50%;
     h1 {
       font-family: 'Catamaran', serif;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
       font-weight: 900;
       font-size: 40px;
       color: $color-4;
@@ -400,7 +393,7 @@ h4 { font-size: 20px; }
     .line5 {
       border-top: 1px solid #979797;
       text-align: center;
-      padding: 20px 0;
+      padding: 10px 0;
       margin: 0 auto;
       width: 15vmax;
     }
@@ -838,7 +831,7 @@ h4 { font-size: 20px; }
 @media (max-width:961px)  {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .about {
-    height: 150%;
+    height: 100%;
   }
   .cart-button { display: none; }
   .head-title {
